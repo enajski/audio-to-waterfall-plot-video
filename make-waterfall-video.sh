@@ -105,8 +105,8 @@ fi
 # Location of tools
 MP3INFO=mp3info
 SOX=sox
-PARALLEL=/home/joe/Downloads/parallel-20140122/src/parallel 
-FFMPEG=/var/tmp/ffmpeg-2.1.3/ffmpeg
+PARALLEL=parallel
+FFMPEG=ffmpeg
 MENCODER=mencoder
 
 #
