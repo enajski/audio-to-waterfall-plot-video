@@ -239,12 +239,12 @@ for (( i=0; i<=$nframes; i++ )); do
   fi
   tf=`printf '%0.2f' $t`
   ii=$(($i+1000000))
-  echo "sox ${MONO_FILE} -n spectrogram -d 0:${SPECTROGRAM_WIDTH} -S $audio_offset -t \"${TITLE} t=$tf\" -c \"${CREDIT}\" -o spectrum-${ii}.png" >> $PARALLEL_JOB
+  echo "sox ${MONO_FILE} -n spectrogram -r -d 0:${SPECTROGRAM_WIDTH} -S $audio_offset -t \"${TITLE} t=$tf\" -c \"${CREDIT}\" -o spectrum-${ii}.png -m" >> $PARALLEL_JOB
 done
 
-# Run lines in PARALLEL_JOB file in parallel which will yield a huge 
-# performance boost on a multiprocessor computer. If parallel is not 
-# available you could run this as a sequential script file by 
+# Run lines in PARALLEL_JOB file in parallel which will yield a huge
+# performance boost on a multiprocessor computer. If parallel is not
+# available you could run this as a sequential script file by
 # uncommenting the next line and commenting/removing the line after that.
 # . $PARALLEL_JOB
 cat $PARALLEL_JOB | $PARALLEL
