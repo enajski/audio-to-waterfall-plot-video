@@ -43,7 +43,7 @@ VERSION_DATE="13 Feb 2014"
 #
 # There are a few problems with this script:
 # You'll need to edit to change title/credit on plot. TODO move to command line
-# I've used mencoder to assemble the PNG files into a video, but I find the 
+# I've used mencoder to assemble the PNG files into a video, but I find the
 # a/v sync is off. However if converted to H.264 mp4 with ffmpeg it's fine.
 # Ideally I'd like to create the video with just ffmpeg, but for some reason
 # the version of ffmpeg I have is not working in PNG->video mode.
@@ -51,10 +51,10 @@ VERSION_DATE="13 Feb 2014"
 # need to download latest version and update the PARALLEL config below.
 # The current implementation is very resource intensive. In particular you
 # need *lots* of temporary disk space. This can be improved by generating
-# the video in fragments and deleting the PNG files after a fragment is 
+# the video in fragments and deleting the PNG files after a fragment is
 # generated.
 #
-# See this blog post for more information: 
+# See this blog post for more information:
 # http://jdesbonnet.blogspot.ie/2014/02/convert-mp3-to-scrolling-spectrum.html
 #
 # RELEASE NOTES:
@@ -95,7 +95,7 @@ EOF
 }
 
 if [ $# -lt 1 ]; then
-	usage 
+	usage
 	exit
 fi
 
@@ -140,7 +140,7 @@ TWIDDLE=0.0
 #
 # Parse command line options
 #
-max=0 
+max=0
 while getopts "c:d:ho:r:t:v" flag ; do
 	case $flag in
 		c)
@@ -226,7 +226,7 @@ fi
 # So need to wait for width*fps frames before starting animation.
 x=$((${SPECTROGRAM_WIDTH}*${FPS}))
 
-# Make parallel job file. Unfortunately very slow due to invocation of bc. 
+# Make parallel job file. Unfortunately very slow due to invocation of bc.
 # bc is used because float math is required. bash only supports int math.
 # Add 1000000 to frame number so that file globbing returns files in correct
 # order.
