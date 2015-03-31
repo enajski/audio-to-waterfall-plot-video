@@ -117,14 +117,14 @@ MENCODER=mencoder
 TITLE=""
 
 # Credit on bottom-left
-CREDIT="https://github.com/jdesbonnet/audio-to-waterfall-plot-video"
+CREDIT=""
 
 # Frame rate of video (frames/second). 24, 30 common choices.
 FPS=30
 
 # Width of the spectrogram in seconds. The smaller this value the faster
 # the scrolling speed. 1s - 5s are good values.
-SPECTROGRAM_WIDTH=1
+SPECTROGRAM_WIDTH=15
 
 # Output video file name
 OUTPUT_FILE="output.mp4"
