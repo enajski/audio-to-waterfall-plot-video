@@ -27,8 +27,8 @@
 
 
 
-VERSION_NUMBER="0.3.0"
-VERSION_DATE="13 Feb 2014"
+VERSION_NUMBER="0.3.1"
+VERSION_DATE="30 Mar 2015"
 
 #
 # Script to generate a scrolling spectrum waterfall plot from a MP3 audio file.
