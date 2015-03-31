@@ -262,7 +262,7 @@ cat $PARALLEL_JOB | $PARALLEL
 $FFMPEG -r $FPS -f image2 -pattern_type glob \
  -i 'spectrum-*.png' \
  -i ${MP3_FILE} \
- -vf scale=1280x720 -pix_fmt yuvj420p -c:v libx264 \
+ -vf scale=1920x1080 -pix_fmt yuvj420p -c:v libx264 \
  -c:a aac -strict experimental -b:a 192k \
  $OUTPUT_FILE
 
