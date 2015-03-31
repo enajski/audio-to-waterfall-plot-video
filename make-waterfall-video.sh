@@ -174,15 +174,15 @@ while getopts "c:d:ho:r:t:v" flag ; do
 		exit
 		;;
 
-	esac 
+	esac
 
 	if [ $OPTIND -gt $max ] ; then
-		max=$OPTIND 
-	fi 
-done 
+		max=$OPTIND
+	fi
+done
 
 # Shift params to the left so that first param after options is at $1
-shift $((max-1))
+# shift $((max-1))
 
 # Audio file
 MP3_FILE=$1
