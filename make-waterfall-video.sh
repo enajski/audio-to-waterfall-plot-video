@@ -268,8 +268,8 @@ $FFMPEG -r $FPS -f image2 -pattern_type glob \
 
 
 # Cleanup temporary files
-#rm spectrogram-*.png
 #rm output.avi
-#rm ${MONO_FILE}
-#rm ${PARALLEL_JOB}
+find . -name "spectrum*.png" -print0 | xargs -0 rm
+rm ${MONO_FILE}
+rm ${PARALLEL_JOB}
 
