@@ -208,7 +208,7 @@ audio_length=`${MP3INFO} -p "%S" ${MP3_FILE}`
 # add the original high quality audio to the video at end.
 # If you want to see more detail try 4k sampling. For ref
 # middle-C is about 262Hz.
-${SOX} ${MP3_FILE} -r 8k -o ${MONO_FILE} remix 1,2
+${SOX} ${MP3_FILE} -r 44k ${MONO_FILE} remix 1,2
 
 # Number of frames (len * FPS)
 nframes=`bc -l <<< "$audio_length*$FPS"`
